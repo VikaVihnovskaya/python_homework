@@ -28,3 +28,49 @@ if __name__ == "__main__":
         list.append(fibo(i))
 
     print(list)
+# def feb(num):
+# list = [0, 1, 1]
+# list_1 = []
+# for i in range(1, num-1):
+# list.append(list[i]+list[i+1])
+# for i in range(1, len(list)):
+# list_1.append(list[-i])
+# i = -2
+# while i >= (len(list_1) * (-1)):
+# list_1[i] *= (-1)
+# i -= 2
+# total = list_1 + list
+# return total
+#
+# num = int(input('Введите число: '))
+# print(feb(num)
+# def fibonacci(n):
+# if n in (1, 2):
+# return 1
+# return fibonacci(n - 1) + fibonacci(n - 2)
+#
+#
+# def reversed_fibonacci(n):
+# if n in (1, 2):
+# return 1
+# return reversed_fibonacci(n + 2) - reversed_fibonacci(n + 1)
+#
+#
+# def negafibonacci() -> list:
+# a = []
+# b = []
+# try:
+# n = int(input("Введите число для последовательности Фибоначчи:"))
+# if type(n) in [int]:
+# for i in range(-n, n + 1):
+# if i > 0:
+# a.append((fibonacci(i)))
+# else:
+# b.append(reversed_fibonacci(i))
+# return f'- для k={n} список будет выглядеть так: {b + a}'
+# except ValueError as e:
+# print(e)
+# return negafibonacci()
+#
+#
+# print(negafibonacci())
