@@ -25,9 +25,11 @@ def decoding(txt):
     return result
 
 
-s = input("Введите текст для кодировки: ")
-print(f"Текст после кодировки: {coding(s)}")
-print(f"Текст после дешифровки: {decoding(coding(s))}")
+with open("task_4.txt", "r+") as data:
+    str_Text = data.readline()
+    print(str_Text)
+print(f"Текст после кодировки: {coding(str_Text)}")
+print(f"Текст после дешифровки: {decoding(coding(str_Text))}")
 
 
 
