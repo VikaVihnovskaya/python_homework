@@ -1,12 +1,14 @@
 # Напишите программу, которая принимает на вход число N и выдает набор произведений чисел от 1 до N.
 if __name__ == "__main__":
-n = int(input('Введите число: '))
-i = 1
-mult = 1
-while i <= n:
-    mult = mult * i
-    i += 1
-    print([mult], end=' ')
+
+
+    n = int(input('Введите число: '))
+    i = 1
+    mult = 1
+    while i <= n:
+        mult = mult * i
+        i += 1
+        print([mult], end=' ')
 
 
 
