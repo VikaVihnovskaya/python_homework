@@ -1,25 +1,26 @@
+import csv
+
 def write_contact():
-    with open('dataBase.txt', 'a') as data:
-        data.write(input('Fill a name: ') + '\n')
-        data.write(input('Fill a surname: ') + '\n')
-        data.write(input('Fill a telephone number: ') + '\n\n')
+    with open('dataBase.csv', 'a') as data:
+        name = input('Fill a name: ')
+        surname = input('Fill a surname: ')
+        number = input('Fill a telephone number: ')
+        writer = csv.DictWriter(data, ['Name', 'Surname', 'Number'])
+        row = {'Name': name, 'Surname': surname, 'Number': number}
+        writer.writerow(row)
 
 
 def read_contact():
-    with open('dataBase.txt', 'r') as data:
-        return data.read()
+    with open('dataBase.csv', 'r') as data:
+        reader = csv.DictReader(data)
+        return list(reader)
 
 
 def rewrite(data_list):
-    temp_list = []
-    for i in range(len(data_list)):
-            temp_list.append('\n'.join(data_list[i]))
-    temp_str = '\n\n'.join(temp_list)
-    with open('dataBase.txt', 'w') as data:
-        data.write(temp_str)
+    with open('dataBase.csv', 'w') as data:
+        writer = csv.DictWriter(data, ['Name', 'Surname', 'Number'])
+        writer.writeheader()
+        for row in data_list:
+            writer.writerow(row)
 
 
-def conclusion_contact():
-    with open('dataBase.txt', 'r') as data:
-        print('=====================')
-        return print(data.read())
