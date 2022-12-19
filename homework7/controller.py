@@ -1,5 +1,5 @@
-from data_base import write_contact, read_contact, conclusion_contact, rewrite
-from funcs import search, delete_contact, import_file, correction_data, data_To_List
+from data_base import write_contact, rewrite
+from funcs import search, delete_contact, import_file, correction_data, data_to_list, print_tabl_numbook
 
 
 def redactor():
@@ -17,16 +17,16 @@ def redactor():
         str_in = input()
         if str_in == "1":
             print('')
-            rewrite(correction_data(data_To_List()))
+            rewrite(correction_data(data_to_list()))
             return redactor()
         elif str_in == "2":
             write_contact()
         elif str_in == "3":
-            rewrite(delete_contact(data_To_List()))
+            rewrite(delete_contact(data_to_list()))
         elif str_in == "4":
-            search(data_To_List())
+            search(data_to_list())
         elif str_in == "5":
-            conclusion_contact()
+            print_tabl_numbook()
         elif str_in == "6":
             text = input('Введите путь к файлу: ')
             rewrite(import_file(text))
